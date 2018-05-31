@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import urllib
 
+
 class HtmlDownloader(object):
     
 
@@ -9,8 +10,9 @@ class HtmlDownloader(object):
             return None
         
         response = urllib.request.urlopen(url)
+        
         #The getcode() method returns the HTTP status code that was sent with the response, or None if the URL is no HTTP URL.
-        if response.getcode != 200:
+        if response.getcode() != 200:
             return None
         
         return response.read()
